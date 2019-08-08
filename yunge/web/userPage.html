@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $.get("getUserArticleServlet",{},function (data) {
+                var list = '';
+                for (var i = 0; i < data.length; i++) {
+                    var article = data[i];
+                    var username = article.articlename.substring(0,article.articlename.indexOf("-"));
+                    var articlename = article.articlename.substring(article.articlename.indexOf("-")+1);
+                    var li = '<li> <a href="/yun/read.html?username='+username+'&articlename='+articlename+'">'+article.articlename+'</a></li>';
+                    list+=li;
+                }
+                $("#showArticle").html(list);
+            });
+        });
+    </script>
+</head>
+<body>
+嗨喽！这是你的文章列表：
+<ul id="showArticle">
+</ul>
+</body>
+</html>

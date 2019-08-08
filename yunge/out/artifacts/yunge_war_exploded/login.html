@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<!--<body style="background: url('photos/image/40c0fccece2f6228181de7912f850c26.jpg')">-->
+<body style="background:lightgoldenrodyellow">
+<!--<img src="photos/image/banner_1.jpg">-->
+
+<div style="width: 50%;margin: auto;margin-top: 200px">
+    <form class="form-horizontal" action="/myweb/zhuce" method="get">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-4 control-label">账号</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="请输入账号" name="username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-4 control-label">密码</label>
+            <div class="col-sm-5">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码" name="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword4" class="col-sm-4 control-label">验证码</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="inputPassword4" placeholder="请输入验证码" name="checkCode">
+                <img src="/yun/checkCodeServlet">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" checked> 记住账号
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+                <button type="submit" class="btn btn-default">登录</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+                没有账号？<a href="/userZhuce.jsp">立即注册</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
